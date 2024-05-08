@@ -27,7 +27,7 @@ nav:
   - 开始:
     - index.md
   - 编程基础:
-    - programming/lec00.md
+    - programming/lec00/lec00.md
 
 markdown_extensions:
   - footnotes
