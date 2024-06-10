@@ -76,25 +76,26 @@ Microsoft提供的Visual Studio Code下载网页和Visual Studio是一个：[Vis
 
 [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens), 将报错信息直接显示在对应行上，无需看专门的错误输出窗口
 
-[Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme), 改变项目文件的图标。
+[Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme), 改变项目文件的图标，我认为还是比默认的要好看一些。
 
 [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl), 连接WSL用的。
 
-[clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd), 连接clangd这个lsp(Language Server Protocol)，提供了代码补全，代码格式化，语法检查等功能。
+[clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd), 连接 `clangd` 这个 lsp(Language Server Protocol)，提供了代码补全，代码格式化，语法检查等功能。
 
-[CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb), 使用lldb调试器进行调试，lldb是llvm项目内的，和gdb调试器类似。这里为什么没有用单选择一个lldb的，因为gdb调试器被[C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)支持，但这个插件和clangd有些冲突。
+[CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb), 使用 `lldb` 调试器进行调试，`lldb` 是 [LLVM](https://llvm.org/) 项目内的，和`gdb` 调试器类似。
+这里为什么没有用单选择一个 `lldb` 的，因为 `gdb` 调试器被 [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) 支持，但这个插件和 `clangd` 有些冲突。
 
-[CMake](https://marketplace.visualstudio.com/items?itemName=twxs.cmake), cmake插件, 提供了编写CMakeLists的时候的代码补全等功能
+[CMake](https://marketplace.visualstudio.com/items?itemName=twxs.cmake), CMake插件, 提供了编写CMakeLists的时候的代码补全等功能
 
-[CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools), cmake插件, 提供了更方便的运行cmake的方式。
+[CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools), CMake插件, 提供了更方便的运行CMake的方式。
 
 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), 使用python开发的话还是安装一个，提供了运行调试等多种功能。
 
-这里面有的无需在本机安装，比如clangd, CodeLLDB这些，因为我们是为了连WSL进行开发工作。
+这里面有的无需在本机安装，比如 clangd, CodeLLDB 这些，因为我们是为了连 WSL 进行开发工作。
 
 ### 安装WSL
 
-Windows目前官方支持以下这些发行版:
+Windows 目前官方支持以下这些发行版:
 
 ```shell
 wsl --list --online
@@ -118,13 +119,13 @@ SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise 15 SP5
 openSUSE-Tumbleweed                    openSUSE Tumbleweed
 ```
 
-我更推荐安装**openSUSE-Tumbleweed**，因为openSUSE-Tumbleweed软件更新策略导致它的软件更新一些。这里直接打开Windows Terminal安装openSUSE-Tumbleweed即可。
+我更推荐安装**openSUSE-Tumbleweed**，因为 openSUSE-Tumbleweed 软件更新策略导致它的软件更新一些。这里直接打开 Windows Terminal 安装 openSUSE-Tumbleweed 即可。
 
-[Windows Terminal](https://github.com/microsoft/terminal)是微软官方发布的终端程序。貌似Windows 11是内置的，Windows 10的话就打开powershell吧。
+[Windows Terminal](https://github.com/microsoft/terminal) 是微软官方发布的终端程序。貌似 Windows 11 是内置的，Windows 10的话就打开 powershell 吧。
 
 如果不知道什么是终端，请移步(还在完善)。
 
-在Windows Terminal中输入
+在 Windows Terminal 中输入
 
 ```powershell
 wsl.exe --install openSUSE-Tumbleweed
@@ -136,13 +137,13 @@ wsl.exe --install openSUSE-Tumbleweed
 
 ![yast intro](./img/yast_intro.png)
 
-Tab和Shift + Tab键控制光标当前选中的选项，这里直接按回车就代表确认了。
+Tab 和Shift + Tab键控制光标当前选中的选项，这里直接按回车就代表确认了。
 
 ![yast language](./img/yast_lang.png)
 
-现在是让你选择语言，我推荐直接用默认的这个英文即可，因为我们主力机还是本机这个Windows，WSL安装只是方便工作，没必要上中文，当然还有就是一些软件的中文翻译没有那么健全，而且一些软件的报错信息什么的，英文更容易搜索一些。
+现在是让你选择语言，我推荐直接用默认的这个英文即可，因为我们主力机还是本机这个 Windows，WSL 安装只是方便工作，没必要上中文，当然还有就是一些软件的中文翻译没有那么健全，而且一些软件的报错信息什么的，英文更容易搜索一些。
 
-**上面这段话，我无意于此论证中英文的优劣**，这里我只是局限于用来开发C/C++的WSL的安装时候的语言选择，不包含其它。
+**上面这段话，我无意于此论证中英文的优劣**，这里我只是局限于用来开发 C/C++ 的 WSL 的安装时候的语言选择，不包含其它。
 
 ![yast user](./img/yast_user.png)
 
@@ -158,11 +159,11 @@ Tab和Shift + Tab键控制光标当前选中的选项，这里直接按回车就
 
 ![opensuse install final](./img/opensuse_install_final.png)
 
-可以看到最后一行的前缀是**opensuse@DESKTOP-ZS**，现在就是在WSL内执行了。点击Windows Terminal上面新建标签栏右边那个按钮就可以找到这个opensuse的进入方式
+可以看到最后一行的前缀是**opensuse@DESKTOP-ZS**，现在就是在 WSL 内执行了。点击 Windows Terminal 上面新建标签栏右边那个按钮就可以找到这个 opensuse 的进入方式
 
 ![wt select](./img/wt_select.png)
 
-首先改root密码，注意这里是本机的powershell先执行`wsl --user root`以root用户身份登陆的WSL。
+首先改 root 密码，注意这里是本机的 powershell 先执行 `wsl --user root` 以root用户身份登陆的WSL。
 
 ```bash
 PS C:\Users\zs> wsl --user root
@@ -174,9 +175,9 @@ passwd: password updated successfully
 
 值得注意的是，终端中输入密码基本是没有任何信息的，我的意思是你输入的字符不会变成\*，直接是不可见的。
 
-这里先设置root密码是因为后续`sudo zypper`会询问root密码而非opensuse这个用户的密码。
+这里先设置 root 密码是因为后续 `sudo zypper` 会询问 root 密码而非 opensuse 这个用户的密码。
 
-之所以这里这么提到root，因为root是最高权限的用户。
+之所以这里这么提到 root，因为 root 是最高权限的用户。
 
 ```bash
 opensuse@DESKTOP-ZS:~> sudo zypper install clang18 lldb starship cmake bash-completion gdb
@@ -210,17 +211,17 @@ opensuse@DESKTOP-ZS:~> sudo zypper install clang18 lldb starship cmake bash-comp
 
 ![vim menu](./img/vim_bashrc_menu.png)
 
-我这里先不过多介绍vim的用法了，就说这里能用到的，vim这个编辑器有四种模式——正常，命令，插入，观看（我的翻译可能有些问题）。
+我这里先不过多介绍 `vim` 的用法了，就说这里能用到的，`vim` 这个编辑器有四种模式——正常，命令，插入，阅览（我的翻译可能有些问题）。
 
-vim一打开就是命令模式，按`i`进入插入模式（按`a`也可以），按`v`就进入观看模式，按`:`进入命令模式，回到正常模式需要按`Esc`键。
+`vim` 一打开就是命令模式，按 `i` 进入插入模式（按 `a` 也可以），按 `v` 就进入观看模式，按`:`进入命令模式，回到正常模式需要按`Esc`键。
 
 不同模式下，左下角是显示是不同的，如果进入了插入模式的话，左下角的显示是：
 
 ![vim insert](./img/vim_insert.png)
 
-观看模式的话，INSERT的位置显示的是VISUAL。
+阅览模式的话，INSERT 的位置显示的是 VISUAL。
 
-根据[starship官网](https://starship.rs/zh-CN/guide/)，对于bash来说，需要在bashrc文件中添加`eval "$(starship init bash)"`，按`i`进入插入模式后，在文件末尾输入即可。
+根据[starship官网](https://starship.rs/zh-CN/guide/)，对于 `bash` 来说，需要在 **.bashrc** 文件中添加 `eval "$(starship init bash)"`，按 `i` 进入插入模式后，在文件末尾输入即可。
 
 之后运行下面这条语句：
 
