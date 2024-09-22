@@ -1,9 +1,9 @@
-site_name: 计算机基础学习
-site_description: 面向初学者，尝试维护一个modern的学习指南
+site_name: NIL wiki
+site_description: 面向 NIL ，尝试维护一个 wiki
 site_author: suoyuan666
 # site_url: 
-repo_name: learn_c
-repo_url: https://github.com/suoyuan666/learn_c
+repo_name: NIL_notes
+repo_url: https://github.com/suoyuan666/NIL_notes
 copyright: Copyright &copy; 2024 suoyuan666
 theme:
   name: material
@@ -27,7 +27,14 @@ nav:
   - 开始:
     - index.md
   - 编程基础:
-    - programming/lec00/lec00.md
+    - C/C++:
+      - programming/lec00/lec00.md
+  - Linux 相关:
+    - linux/keep.md
+  - 工具使用:
+    - tools/keep.md
+  - 笔记:
+    - notes/keep.md
 
 markdown_extensions:
   - footnotes
