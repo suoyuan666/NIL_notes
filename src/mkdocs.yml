@@ -4,7 +4,7 @@ site_author: suoyuan666
 # site_url: 
 repo_name: NIL_notes
 repo_url: https://github.com/suoyuan666/NIL_notes
-copyright: Copyright &copy; 2024 suoyuan666
+copyright: Copyright &copy; 2024
 theme:
   name: material
   language: zh
@@ -31,10 +31,13 @@ nav:
       - programming/lec00/lec00.md
   - Linux 相关:
     - linux/keep.md
-  - 工具使用:
+  - 软件使用:
     - tools/keep.md
   - 笔记:
     - notes/keep.md
+  - 实用工具:
+    - Markdown:
+      - misc/markdown.md
 
 markdown_extensions:
   - footnotes
