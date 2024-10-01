@@ -30,9 +30,10 @@ nav:
     - C/C++:
       - programming/lec00/lec00.md
   - Linux 相关:
-    - linux/keep.md
+      - index: 
+        - linux/index.md
   - 软件使用:
-    - tools/keep.md
+    - tools/git.md
   - 笔记:
     - notes/keep.md
   - 实用工具:
