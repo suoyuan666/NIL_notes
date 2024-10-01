@@ -37,7 +37,7 @@ $ git clone https://github.com/suoyuan666/NIL_notes
 
 该文档使用 [mkdocs](https://github.com/mkdocs/mkdocs) 生成，使用了 [mkdocs-material](https://github.com/squidfunk/mkdocs-material) 主题，所以需要使用 pip 安装相关的库。
 
-我推荐使用虚拟环境安装相关的库文件，这样安装的库文件不会污染到整个系统中。Python 内置了一个虚拟环境的模块 [venv](https://docs.python.org/zh-cn/3/library/venv.html)，也有第三方的工具实现更好的虚拟，我印象中有一个可以允许虚拟环境指定 Python 版本的，但我没用过。
+我推荐使用虚拟环境安装相关的库文件，这样安装的库文件不会污染到整个系统中。Python 内置了一个虚拟环境的模块 [venv](https://docs.python.org/zh-cn/3/library/venv.html)，也有第三方的工具实现更好的虚拟环境，我印象中有一个可以允许虚拟环境指定 Python 版本的，但我没用过。
 
 在你 clone 后的目录下运行:
 
@@ -48,7 +48,7 @@ $ source ./bin/activate
 
 第一个命令是将该目录初始化成一个虚拟环境中的根目录（也就是虚拟环境下的库文件都会安装到这里），由于存在 **.gitignore**，所以你在提交代码的时候不会把他们提交上去，如果你不想在当前目录初始化也可以，随便找个位置，不过第二条的 `.` 也得变成你自己定义的目录。
 
-第二个命令是为了将当前的环境变成你初始化好的虚拟环境，[venv](https://docs.python.org/zh-cn/3/library/venv.html#how-venvs-work) 中列出了不同 shell 需要执行的命令。
+第二个命令是为了将当前的环境变成你初始化好的虚拟环境，[venv](https://docs.python.org/zh-cn/3/library/venv.html#how-venvs-work) 中列出了不同 shell 需要执行的命令。如果你使用的是 `bash/zsh` 那就执行我给出的这个命令就行了。
 
 之后使用 `pip` 安装相关库文件
 
@@ -133,3 +133,41 @@ nav:
 这里表示的就是文档的层级关系，你简单看一下网页就能知道这到底是什么写的了。你可以在 _src/docs_ 文件夹中找到对应的文件。
 
 文档使用 Markdown 语言编写，如果不熟悉可参考 [Markdown](./misc/markdown/)
+
+修改玩之后可以在 *src* 路径下执行 `mkdocs serve` 查看修改后的网页。
+
+如果你的修改结束，可以使用 `git` 添加你的修改，你可以:
+
+```bash
+$ git add /path/to/afile /path/to/bfile
+$ git add .
+$ git add -p .
+```
+
+- 第一个是指定文件添加到本次的修改中
+- 第二个是将当前目录所有修改的文件都添加到本次的修改，会递归遍历子目录
+- 第三个是找到当前所有修改的文件并依次询问你是否要将该文件添加到本次的修改，不会递归遍历子目录
+
+之后要为本次的修改正式起一个名字
+
+```bash
+$ git commit -m "title"
+$ git commit
+```
+
+- 第一个是将 `title` 作为本次提交所附带的信息
+- 第二个会打开终端默认的编辑器，你可以在上面编辑本次提交附带的信息
+
+commit 之后就可以 push 到你的仓库中了
+
+```bash
+$ git push
+```
+
+这里有一个问题，GitHub 默认需要你生成一个 key 去验证是你本人提交，虽然这不代表本次提交是签名的（
+
+设置中的 **Developer Settings** Personal access tokens 有两个选项，第一个细粒度可以对单独仓库生成 token第二个则不是，无论如何你至少需要 repo 的写权限。
+
+生成好了之后，用户名是你注册时的 username，而密码就是生成的 token 了。
+
+push 了之后你会发现你的仓库会有一个将你的修改请求同步到上游的申请。
