@@ -15,6 +15,12 @@ $ source ./bin/activate
 $ pip install mkdocs-material mkdocs
 ```
 
+> [!NOTE]
+>
+> 如果你使用的是 python 3.13，请使用 `python -m venv . --without-scm-ignore-files` 而不是 `python -m venv .`
+>
+> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 添加了 `--without-scm-ignore-files` 这个选项，并且默认启用。这会覆盖掉项目本身的 **.gitignore** 文件
+
 ##  如何参与维护
 
 在 GitHub 上 fork 该仓库，之后将你 fork 后产生的仓库 clone 到本地
@@ -46,6 +52,12 @@ $ python -m venv .
 $ source ./bin/activate
 ```
 
+> [!NOTE]
+>
+> 如果你使用的是 python 3.13，请使用 `python -m venv . --without-scm-ignore-files` 而不是 `python -m venv .`
+>
+> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 添加了 `--without-scm-ignore-files` 这个选项，并且默认启用。这会覆盖掉项目本身的 **.gitignore** 文件
+
 第一个命令是将该目录初始化成一个虚拟环境中的根目录（也就是虚拟环境下的库文件都会安装到这里），由于存在 **.gitignore**，所以你在提交代码的时候不会把他们提交上去，如果你不想在当前目录初始化也可以，随便找个位置，不过第二条的 `.` 也得变成你自己定义的目录。
 
 第二个命令是为了将当前的环境变成你初始化好的虚拟环境，[venv](https://docs.python.org/zh-cn/3/library/venv.html#how-venvs-work) 中列出了不同 shell 需要执行的命令。如果你使用的是 `bash/zsh` 那就执行我给出的这个命令就行了。
@@ -64,7 +76,7 @@ $ pip install mkdocs-material mkdocs
 - [PyPI - USTC Mirror Help](https://mirrors.ustc.edu.cn/help/pypi.html)
 - [PyPI — NJU Mirror Help](https://nju-mirror-help.njuer.org/pypi.html)
 
-此外还有上交大，北京外国语等学校都提供了镜像源服务，不过不清楚是否提供了 pip 的镜像源，除次之外，阿里，腾讯等也提供了镜像源服务。
+此外还有上交大，北京外国语等学校都提供了镜像源服务，不过不清楚是否提供了 pip 的镜像源，除此之外，阿里，腾讯等也提供了镜像源服务。
 
 清华和南大的镜像源甚至提供了常见软件和 Linux 发行版，可以直接在镜像站中下载。我并不清楚中科大的镜像站是否也提供了这个服务。
 
@@ -168,6 +180,6 @@ $ git push
 
 设置中的 **Developer Settings** Personal access tokens 有两个选项，第一个细粒度可以对单独仓库生成 token第二个则不是，无论如何你至少需要 repo 的写权限。
 
-生成好了之后，用户名是你注册时的 username，而密码就是生成的 token 了。
+生成好了之后，用户名是你注册时的 username，而密码就是生成的 token 了
 
-push 了之后你会发现你的仓库会有一个将你的修改请求同步到上游的申请。
+push 了之后你会发现你的仓库会有一个将你的修改请求同步到上游的申请，点击就到了 pull request 的请求界面
