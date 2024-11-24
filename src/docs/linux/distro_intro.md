@@ -174,19 +174,19 @@ Gentoo 使用 portage 软件包管理器，软件大多都是从源码开始安�
 
 这个自由是选择的自由
 
-Gentoo Linux 是少数可以让你选择非 systemd 作为系统 init 系统的 Linux 发行版，但在这个世界，使用非 systemd 作为自己桌面操作系统的 init 系统就像用 linux-libre 作为自己的系统内核一样难绷，不过非 systemd 的 init（如 openrc 还算可用，不过我很怀疑 linux-libre 的使用情况）。
+Gentoo Linux 是少数可以让你选择非 systemd 作为系统 init 系统的 Linux 发行版，但在这个世界，使用非 systemd 作为自己桌面操作系统的 init 系统就像用 linux-libre 作为自己的系统内核一样难绷，不过非 systemd 的 init（如 openrc） 还算可用，不过我很怀疑 linux-libre 的使用情况。
 
-也许你对部分发行版打包的策略有意见，比如某些软件你希望直接上 O3 + lto 编译（虽然这些都是理论上的性能提升，用户难以直接感知到变化），但是为了稳定，少有发行版会选择这个编译策略，但是 Gentoo Linux 可以让你的想法成真。
+也许你对部分发行版打包的策略有意见，比如某些软件你希望直接上 O3 + lto 编译（虽然这些都是理论上的性能提升，用户难以直接感知到变化），但是为了稳定，少有发行版会选择这个编译策略，但是 Gentoo Linux 可以实现你的想法。
 
-或者你不满软件的一些行为，但是你的 patch 一时还难以合并过去，portage 支持编译时应用用户自己的 patch。
+或者你不满软件的一些行为，但是你的 patch 一时还难以合并过去，portage 支持编译时打上用户自己的 patch。
 
 > Fedora 41 选择了使用 O3 编译 Python，自称有 1.4 倍的性能提升
 >
 > https://fedoraproject.org/wiki/Changes/Python_built_with_gcc_O3
 
-portage 的优点在于提供了 USE 变量，它允许用户自己决定软件的功能支持以确定依赖关系。Arch Linux 可能可以认为是可以定制你的系统，Gentoo Linux 就是可以定制你的软件。
+portage 的优点在于提供了 USE 变量，它允许用户自己决定软件的功能支持以确定依赖关系。
 
-> USE 是 Gentoo 为用户提供的最具威力的变量之一。很多程序通过它可以选择编译或者不编译某些可选的支持。例如，一些程序可以在编译时加入对 GTK+或是对 Qt 的支持。其它的程序可以在编译时加入或不加入对于 SLL 的支持。有些程序甚至可以在编译时加入对 framebuffer 的支持（svgalib）以取代 X11（X 服务器）。
+> USE 是 Gentoo 为用户提供的最具威力的变量之一。很多程序通过它可以选择编译或者不编译某些可选的支持。例如，一些程序可以在编译时加入对 GTK+ 或是对 Qt 的支持。其它的程序可以在编译时加入或不加入对于 SLL 的支持。有些程序甚至可以在编译时加入对 framebuffer 的支持（svgalib）以取代 X11（X 服务器）。
 >
 > 大多数的发行版会使用尽可能多的支持特性编译它们的软件包，这既增加了软件的大小也减慢了启动时间，而这些还没有算上可能会涉及到的大量依赖性问题。Gentoo 可以让你自己定义软件编译的选项，而这正是 USE 要做的事。、
 >
@@ -196,9 +196,11 @@ portage 的优点在于提供了 USE 变量，它允许用户自己决定软件�
 
 当然还有很多变量，比如 CFLAGS, L10N, VIDEO_CARDS 这些，可以指定编译选项，本地语言和显卡设备
 
-Gentoo Linux 这种源代码发行的系统，优势在于软件都是自己的机器编译安装，从隐私或安全角度来说都还不错，可惜我的机器性能没那么强劲。
+Gentoo Linux 这种源代码发行的系统，优势在于软件都是自己的机器编译安装，从隐私或安全角度来说都还不错，可惜一定程度上还要看你用来编译软件的机器的性能。
 
-Gentoo Linux 的安装并不完全依赖于它的安装介质，比如也可以使用 Arch Linux 的 livecd 去安装。
+据 [suoyuan](https://github.com/suoyuan666) 的个人体验来说，他的 Intel i7-12700H + 16 GB 的内存的笔记本电脑，编译 gentoo-kernel 需要四十分钟左右，FireFox 需要三十分钟左右，而 Chromium 需要四个小时多，GCC 和 LLVM 的编译所花费的时间也不短。
+
+Gentoo Linux 的安装并不完全依赖于它的安装介质，也可以使用 Arch Linux 的 livecd 去安装。
 
 Gentoo Linux 是滚动更新。
 
