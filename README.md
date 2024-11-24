@@ -19,7 +19,7 @@ $ pip install mkdocs-material mkdocs
 >
 > 如果你使用的是 python 3.13，请使用 `python -m venv . --without-scm-ignore-files` 而不是 `python -m venv .`
 >
-> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 添加了 `--without-scm-ignore-files` 这个选项，并且默认在根目录生成一个 **.gitignore**。这会覆盖掉项目本身的 **.gitignore** 文件
+> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 默认在根目录生成一个 **.gitignore**，添加了 `--without-scm-ignore-files` 选项用于关闭这个功能。
 >
 > 如果你不知道你电脑安装的 python 的版本，使用 `python --version` 会打印出版本信息
 
@@ -58,7 +58,7 @@ $ source ./bin/activate
 >
 > 如果你使用的是 python 3.13，请使用 `python -m venv . --without-scm-ignore-files` 而不是 `python -m venv .`
 >
-> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 添加了 `--without-scm-ignore-files` 这个选项，并且默认在根目录生成一个 **.gitignore**。这会覆盖掉项目本身的 **.gitignore** 文件
+> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 默认在根目录生成一个 **.gitignore**，添加了 `--without-scm-ignore-files` 选项用于关闭这个功能。
 >
 > 如果你不知道你电脑安装的 python 的版本，使用 `python --version` 会打印出版本信息
 
