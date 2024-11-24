@@ -19,7 +19,9 @@ $ pip install mkdocs-material mkdocs
 >
 > 如果你使用的是 python 3.13，请使用 `python -m venv . --without-scm-ignore-files` 而不是 `python -m venv .`
 >
-> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 添加了 `--without-scm-ignore-files` 这个选项，并且默认启用。这会覆盖掉项目本身的 **.gitignore** 文件
+> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 添加了 `--without-scm-ignore-files` 这个选项，并且默认在根目录生成一个 **.gitignore**。这会覆盖掉项目本身的 **.gitignore** 文件
+>
+> 如果你不知道你电脑安装的 python 的版本，使用 `python --version` 会打印出版本信息
 
 ##  如何参与维护
 
@@ -56,7 +58,9 @@ $ source ./bin/activate
 >
 > 如果你使用的是 python 3.13，请使用 `python -m venv . --without-scm-ignore-files` 而不是 `python -m venv .`
 >
-> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 添加了 `--without-scm-ignore-files` 这个选项，并且默认启用。这会覆盖掉项目本身的 **.gitignore** 文件
+> 根据 [Creating virtual environments](https://docs.python.org/3/library/venv.html#creating-virtual-environments)，python 3.13 后，venv 添加了 `--without-scm-ignore-files` 这个选项，并且默认在根目录生成一个 **.gitignore**。这会覆盖掉项目本身的 **.gitignore** 文件
+>
+> 如果你不知道你电脑安装的 python 的版本，使用 `python --version` 会打印出版本信息
 
 第一个命令是将该目录初始化成一个虚拟环境中的根目录（也就是虚拟环境下的库文件都会安装到这里），由于存在 **.gitignore**，所以你在提交代码的时候不会把他们提交上去，如果你不想在当前目录初始化也可以，随便找个位置，不过第二条的 `.` 也得变成你自己定义的目录。
 
@@ -78,7 +82,7 @@ $ pip install mkdocs-material mkdocs
 
 此外还有上交大，北京外国语等学校都提供了镜像源服务，不过不清楚是否提供了 pip 的镜像源，除此之外，阿里，腾讯等也提供了镜像源服务。
 
-清华和南大的镜像源甚至提供了常见软件和 Linux 发行版，可以直接在镜像站中下载。我并不清楚中科大的镜像站是否也提供了这个服务。
+清华和南大的镜像源甚至提供了常见软件安装包和 Linux 发行版的系统镜像文件，可以直接在镜像站中下载。我并不清楚中科大的镜像站是否也提供了这个服务。
 
 该项目的基本结构:
 
@@ -176,10 +180,14 @@ commit 之后就可以 push 到你的仓库中了
 $ git push
 ```
 
-这里有一个问题，GitHub 默认需要你生成一个 key 去验证是你本人提交，虽然这不代表本次提交是签名的（
+这里有一个问题，GitHub 默认需要你生成一个 key 去验证是你本人提交（虽然这不代表本次提交是签名的）
 
-设置中的 **Developer Settings** Personal access tokens 有两个选项，第一个细粒度可以对单独仓库生成 token第二个则不是，无论如何你至少需要 repo 的写权限。
+在 GitHub 设置中的 **Developer Settings** -> Personal access tokens 有两个选项，第一个细粒度可以对单独仓库生成 token，第二个则不是，无论如何你至少需要 repo 的写权限。
 
 生成好了之后，用户名是你注册时的 username，而密码就是生成的 token 了
+
+> [!NOTE]
+>
+> token 只会在生成的时候提供给你，请将它妥善保管
 
 push 了之后你会发现你的仓库会有一个将你的修改请求同步到上游的申请，点击就到了 pull request 的请求界面
