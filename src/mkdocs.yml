@@ -30,8 +30,10 @@ nav:
     - C/C++:
       - programming/lec00/lec00.md
   - Linux 相关:
-      - index: 
-        - linux/index.md
+    - index: 
+      - linux/index.md
+    - 发行版简介:
+      - linux/distro_intro.md
   - 软件使用:
     - tools/git.md
   - 笔记:
