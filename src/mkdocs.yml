@@ -34,6 +34,8 @@ nav:
       - linux/index.md
     - 发行版简介:
       - linux/distro_intro.md
+    - 安装指南:
+      - linux/install.md
   - 软件使用:
     - tools/git.md
   - 笔记:
