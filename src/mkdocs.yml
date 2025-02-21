@@ -28,7 +28,7 @@ nav:
     - index.md
   - 编程基础:
     - C/C++:
-      - programming/lec00/lec00.md
+      - programming/c_cpp/lec00/lec00.md
   - Linux 相关:
     - index: 
       - linux/index.md
